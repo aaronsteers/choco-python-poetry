@@ -2,23 +2,24 @@
 
 ## Package Maintainer Guide
 
-### Incrementing the version number
+### Incrementing the package version number
 
 To increment the version number, simply update the version string in `poetry.nuspec`.
 For prerelease versions, use a `-beta` suffix, e.g. `0.1.0-beta`.
 
-### Updating the installer checksum
+- Note: the package version number is not expected to match the Poetry version. This is
+  because the package does not need to change in order to capture the latest version of the
+  Poetry library.
 
-**Step 1: Obtain the new checksum value:**
+### Updating the installer script
+
+This step is only needed when the `get-poetry.py` script is updated. The `get-poetry.py`
+script itself will regardless always attempt to download the latest version.
 
 ```cmd
-curl [https://remote/url](https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py) ./get-poetry.py
-checksum -t sha256 -f ./get-poetry.py
+cd ./tools
+curl https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py ./get-poetry.py
 ```
-
-**Step 2: Update value in scripts:**
-
-Open `chocolateyinstall.ps1` and `chocolateyuninstall.ps1` and update the `$checksum = ...` line in both files.
 
 ### Building and testing the package locally
 
@@ -37,7 +38,6 @@ Chocolatey v0.10.15
 Attempting to build package from 'poetry.nuspec'.
 Successfully created package 'c:\Files\Source\Choco-Python-Poetry\poetry.0.0.2-beta.nupkg'
 ```
-
 
 #### Test local install
 
