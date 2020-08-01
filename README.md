@@ -4,7 +4,7 @@
 
 ### Incrementing the version number
 
-To increment the version number, simply update the version string in `python-poetry.nuspec`.
+To increment the version number, simply update the version string in `poetry.nuspec`.
 For prerelease versions, use a `-beta` suffix, e.g. `0.1.0-beta`.
 
 ### Updating the installer checksum
@@ -34,21 +34,21 @@ If successful, you should see:
 ```cmd
 > c:\Files\Source\Choco-Python-Poetry>cpack
 Chocolatey v0.10.15
-Attempting to build package from 'python-poetry.nuspec'.
-Successfully created package 'c:\Files\Source\Choco-Python-Poetry\python-poetry.0.0.2-beta.nupkg'
+Attempting to build package from 'poetry.nuspec'.
+Successfully created package 'c:\Files\Source\Choco-Python-Poetry\poetry.0.0.2-beta.nupkg'
 ```
 
 
 #### Test local install
 
 ```cmd
-cinst python-poetry -source %cd% --pre -y
+cinst poetry -source %cd% --pre -y
 ```
 
 Or to rebuild and re-test the install in a single command:
 
 ```cmd
-cpack && cinst python-poetry -source %cd% --pre -y
+cpack && cinst poetry -source %cd% --pre -y
 ```
 
 Test by running `refreshenv` and then `poetry`.
@@ -56,7 +56,7 @@ Test by running `refreshenv` and then `poetry`.
 #### Test local uninstall
 
 ```cmd
-choco uninstall python-poetry -y
+choco uninstall poetry -y
 ```
 
 Test by running `poetry` - command should fail if uninstall was successful.

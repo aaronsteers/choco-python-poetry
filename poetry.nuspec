@@ -10,14 +10,14 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>python-poetry</id>
+    <id>poetry</id>
     <version>0.0.2-beta</version>
     <packageSourceUrl>https://github.com/aaronsteers/choco-python-poetry</packageSourceUrl>
     <owners>AJ Steers</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Python-Poetry (Install)</title>
+    <title>Poetry for Python</title>
     <authors>Sébastien Eustace</authors>
     <projectUrl>https://python-poetry.org/</projectUrl>
     <iconUrl>https://python-poetry.org/images/logo-origami.svg</iconUrl>
@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectSourceUrl>https://github.com/python-poetry/poetry</projectSourceUrl>
     <docsUrl>https://github.com/python-poetry/poetry</docsUrl>
     <bugTrackerUrl>https://github.com/python-poetry/poetry/issues</bugTrackerUrl>
-    <tags>python-poetry python</tags>
+    <tags>poetry python</tags>
     <summary>Python packaging and dependency management made easy.</summary>
     <description>Python packaging and dependency management made easy.</description>
     <!-- =============================== -->
